@@ -1,0 +1,51 @@
+---
+name: 한국어 위키백과
+url: "http://ko.wikipedia.org/"
+license: CC-by-sa
+engine: mediawiki
+engine_options:
+  api_endpoint: "http://ko.wikipedia.org/w/api.php"
+
+---
+name: 한국어 백괴사전
+license: CC-by-nc-sa
+url: "http://uncyclopedia.kr/"
+engine: mediawiki
+engine_options:
+  api_endpoint: "http://uncyclopedia.kr/w/api.php"
+
+---
+name: 구스위키
+license: CC-by-nc-sa
+url: "http://gooswiki.com/"
+engine: mediawiki
+engine_options:
+  api_endpoint: "http://gooswiki.com/api.php"
+
+---
+name: 리그베다 위키
+license: CC-by-nc-sa + 추가 조건
+url: "http://rigvedawiki.net/"
+engine: rigveda
+
+---
+name: 리브레위키
+license: CC-by-sa
+url: "http://librewiki.net/"
+engine: mediawiki
+engine_options:
+  api_endpoint: "http://librewiki.net/api.php"
+
+---
+name: 나무위키
+license: CC-by-nc-sa
+url: "https://namu.wiki/"
+engine: namu
+
+---
+name: 포켓몬 위키
+license: CC-by-sa
+url: "http://ko.pokemon.wikia.com/"
+engine: wikia
+engine_options:
+  domain: ko.pokemon.wikia.com

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>WikiStat</title>
+    <style type="text/css">
+    body {
+        margin: 10px;
+        font-size: 14px;
+    }
+    a {
+        color: #009688;
+    }
+    .ws-container {
+        width: 600px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .ws-title {
+        text-align: center;
+    }
+    .ws-sites {
+        border-collapse: collapse;
+        width: 100%;
+    }
+    .ws-sites th {
+        background-color: #f4f4f4;
+    }
+    .ws-sites th, .ws-sites td {
+        border: 1px solid #ccc;
+        padding: 10px;
+    }
+    .ws-sites-error {
+        text-align: center;
+        color: #999;
+    }
+    </style>
+</head>
+<body>
+<div class="ws-container">
+
+<h1 class="ws-title">WikiStat</h1>
+
+<p>생성 시각: {{ timestamp.strftime('%Y-%m-%d %H:%M:%S') }}</p>
+
+<table class="ws-sites">
+<thead>
+    <tr>
+        <th>사이트명</th>
+        <th>라이선스</th>
+        <th>글 수</th>
+        <th>편집 빈도 (추정)</th>
+    </tr>
+</thead>
+<tbody>
+{% for site in results %}
+    <tr>
+        <td><a href="{{ site.url }}">{{ site.name }}</a></td>
+        <td>{{ site.license }}</td>
+        {% if not site.error %}
+        <td>{{ site.page_count or '?' }}</td>
+        <td>{{ '%.2f'|format(site.freq) }}회/일</td>
+        {% else %}
+        <td colspan="2" class="ws-sites-error">{% if site.error == 'timeout' %}시간 초과{% endif %}</td>
+        {% endif %}
+    </tr>
+{% endfor %}
+</tbody>
+</table>
+
+<a href="https://github.com/dittos/wikistat"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
+
+</div>
+</body>
+</html>
