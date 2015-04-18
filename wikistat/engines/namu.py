@@ -8,7 +8,7 @@ KST = pytz.timezone('Asia/Seoul')
 
 def collect(options):
     data = {}
-    resp = requests.get('https://namu.wiki/RecentChanges', headers={'User-Agent': 'Mozilla/5.0 ()'}, timeout=10)
+    resp = requests.get('https://namu.wiki/RecentChanges', headers={'User-Agent': 'Mozilla/5.0 ()'}, timeout=10, verify=False)
     data['page_count'] = None
     changes = []
     # TODO: 너무 대충 파싱하나?
