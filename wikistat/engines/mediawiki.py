@@ -14,7 +14,7 @@ def collect(options):
         'siprop': 'statistics',
         'format': 'json'
     }).json()
-    data['page_count'] = resp['query']['statistics']['articles']
+    data['page_count'] = resp['query']['statistics']['pages']
     changes = []
     for change in resp['query']['recentchanges']:
         changes.append(pytz.utc.localize(datetime.datetime.strptime(change['timestamp'], '%Y-%m-%dT%H:%M:%SZ')))
