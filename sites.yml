@@ -7,6 +7,14 @@ engine_options:
   api_endpoint: "http://ko.wikipedia.org/w/api.php"
 
 ---
+name: 한국어 위키낱말사전
+url: "http://ko.wiktionary.org/"
+license: CC-by-sa
+engine: mediawiki
+engine_options:
+  api_endpoint: "http://ko.wiktionary.org/w/api.php"
+
+---
 name: 한국어 백괴사전
 license: CC-by-nc-sa
 url: "http://uncyclopedia.kr/"
