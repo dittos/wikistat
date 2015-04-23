@@ -6,12 +6,12 @@ import jinja2
 import pytz
 import yaml
 from requests.exceptions import Timeout
-from wikistat.engines import mediawiki, wikia, rigveda, namu
+from wikistat.engines import mediawiki, wikia, moniwiki, namu
 
 ENGINES = {
     'mediawiki': mediawiki,
     'wikia': wikia,
-    'rigveda': rigveda,
+    'moniwiki': moniwiki,
     'namu': namu,
 }
 

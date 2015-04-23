@@ -39,7 +39,10 @@ id: rigvedawiki
 name: 리그베다 위키
 license: CC-by-nc-sa + 추가 조건
 url: "http://rigvedawiki.net/"
-engine: rigveda
+engine: moniwiki
+engine_options:
+  rc_url: "http://rigvedawiki.net/r1/wiki.php/RecentChanges/more"
+  theme: rigveda
 
 ---
 id: librewiki
