@@ -1,4 +1,5 @@
 ---
+id: wikipedia-ko
 name: 한국어 위키백과
 url: "http://ko.wikipedia.org/"
 license: CC-by-sa
@@ -7,6 +8,7 @@ engine_options:
   api_endpoint: "http://ko.wikipedia.org/w/api.php"
 
 ---
+id: wiktionary-ko
 name: 한국어 위키낱말사전
 url: "http://ko.wiktionary.org/"
 license: CC-by-sa
@@ -15,6 +17,7 @@ engine_options:
   api_endpoint: "http://ko.wiktionary.org/w/api.php"
 
 ---
+id: uncyclopedia-ko
 name: 한국어 백괴사전
 license: CC-by-nc-sa
 url: "http://uncyclopedia.kr/"
@@ -23,6 +26,7 @@ engine_options:
   api_endpoint: "http://uncyclopedia.kr/w/api.php"
 
 ---
+id: gooswiki
 name: 구스위키
 license: CC-by-nc-sa
 url: "http://gooswiki.com/"
@@ -31,12 +35,14 @@ engine_options:
   api_endpoint: "http://gooswiki.com/api.php"
 
 ---
+id: rigvedawiki
 name: 리그베다 위키
 license: CC-by-nc-sa + 추가 조건
 url: "http://rigvedawiki.net/"
 engine: rigveda
 
 ---
+id: librewiki
 name: 리브레위키
 license: CC-by-sa
 url: "http://librewiki.net/"
@@ -45,12 +51,14 @@ engine_options:
   api_endpoint: "http://librewiki.net/api.php"
 
 ---
+id: namuwiki
 name: 나무위키
 license: CC-by-nc-sa
 url: "https://namu.wiki/"
 engine: namu
 
 ---
+id: pokemon-ko
 name: 포켓몬 위키
 license: CC-by-sa
 url: "http://ko.pokemon.wikia.com/"
@@ -59,6 +67,7 @@ engine_options:
   domain: ko.pokemon.wikia.com
 
 ---
+id: wikichan
 name: 위키쨩
 license: CC-by-sa
 url: "http://wiki-chan.net/"
@@ -67,6 +76,7 @@ engine_options:
   api_endpoint: "http://wiki-chan.net/api.php"
 
 ---
+id: ggulwiki
 name: 꿀위키
 license: CC-by-nc-sa
 url: "http://www.ggulwiki.com/"
@@ -75,6 +85,7 @@ engine_options:
   api_endpoint: "http://www.ggulwiki.com/api.php"
 
 ---
+id: nuriwki
 name: 누리위키
 license: CC-by-nc-sa
 url: "http://nuriwiki.net/Gnat/"
