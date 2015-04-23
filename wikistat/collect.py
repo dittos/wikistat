@@ -1,6 +1,7 @@
 import datetime
 import json
 import jinja2
+import pytz
 import yaml
 from requests.exceptions import Timeout
 from wikistat.engines import mediawiki, wikia, rigveda, namu
@@ -26,8 +27,9 @@ def main(site_config_path, output_html_path):
             results.append(site)
             continue
         nchanges = len(data['changes'])
-        assert nchanges >= 2
-        period = (data['changes'][0] - data['changes'][-1]).total_seconds()
+        assert nchanges >= 1
+        now = pytz.utc.localize(datetime.datetime.utcnow())
+        period = (now - data['changes'][-1]).total_seconds()
         assert period >= 0
         period_days = float(period) / 60 / 60 / 24
         site['page_count'] = data['page_count']
