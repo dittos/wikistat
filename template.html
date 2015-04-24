@@ -29,11 +29,28 @@
     }
     .ws-sites th, .ws-sites td {
         border: 1px solid #ccc;
-        padding: 10px;
+        padding: 8px;
     }
     .ws-sites-error {
         text-align: center;
         color: #999;
+    }
+    .ws-license {
+        color: #666;
+        font-size: 0.85em;
+    }
+    .ws-g {
+        margin-right: 4px;
+    }
+    .ws-help {
+        color: #444;
+        list-style: square;
+        margin: 16px;
+        padding: 0;
+        font-size: 0.9em;
+    }
+    .ws-help li {
+        margin-bottom: 8px;
     }
     </style>
 </head>
@@ -47,8 +64,7 @@
 <table class="ws-sites">
 <thead>
     <tr>
-        <th>사이트명</th>
-        <th>라이선스</th>
+        <th>사이트명/라이선스</th>
         <th>문서 수</th>
         <th>편집 빈도 (추정)</th>
     </tr>
@@ -56,11 +72,19 @@
 <tbody>
 {% for site in results %}
     <tr>
-        <td><a href="{{ site.url }}">{{ site.name }}</a></td>
-        <td>{{ site.license }}</td>
+        <td>
+            <a href="{{ site.url }}">{{ site.name }}</a><br>
+            <span class="ws-license">{{ site.license }}</span>
+        </td>
         {% if not site.error %}
-        <td>{{ '{:,}'.format(site.page_count) }}</td>
-        <td>{{ '%.2f'|format(site.freq) }}회/일</td>
+        <td>
+            <span class="ws-g" data-select="{{ site.id }}.page_count"></span>
+            {{ '{:,}'.format(site.page_count) }}
+        </td>
+        <td>
+            <span class="ws-g" data-select="{{ site.id }}.freq"></span>
+            {{ '%.2f'|format(site.freq) }}회/일
+        </td>
         {% else %}
         <td colspan="2" class="ws-sites-error">{% if site.error == 'timeout' %}시간 초과{% endif %}</td>
         {% endif %}
@@ -69,13 +93,32 @@
 </tbody>
 </table>
 
-<ul>
+<ul class="ws-help">
     <li>문서 수는 시스템 문서, 넘겨주기 문서 등을 모두 포함한 수치이므로 실제 글 수와는 차이가 있을 수 있습니다.</li>
     <li>편집 빈도는 최근 100개의 변경사항을 기준으로 추정한 값이므로 시간대에 따라 다를 수 있습니다.</li>
     <li>추가하고 싶은 위키가 있으시면 <a href="https://github.com/dittos/wikistat">GitHub 저장소</a>에 풀 리퀘스트를 보내시거나 <a href="https://twitter.com/__ditto">@__ditto</a>로 연락 주세요.</li>
 </ul>
 
 <a href="https://github.com/dittos/wikistat"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-sparklines/2.1.2/jquery.sparkline.min.js"></script>
+<script>
+var options = {
+    width: '128px',
+    lineColor: '#3F51B5',
+    fillColor: '#fff',
+    tooltipFormatter: function(sparkline, options, fields) {
+        return Math.round(fields.y * 100) / 100 + ' | ' + new Date(1000 * fields.x).toLocaleString();
+    }
+};
+var stats = {{ stats_by_site|safe }};
+$('.ws-g').each(function(i, el) {
+    var $el = $(el);
+    var select = $el.data('select').split('.');
+    $el.sparkline(stats[select[0]][select[1]], options);
+});
+</script>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

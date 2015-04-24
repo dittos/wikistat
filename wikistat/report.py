@@ -20,23 +20,38 @@ def read_recent_logs(log_dir, max_days):
                         v['t'] = entry['t']
                 yield entry
 
+def to_compact_json(data):
+    return json.dumps(data, separators=(',', ':'))
+
 def main(site_config_path, output_html_path, log_dir):
     with open(site_config_path) as fp:
         sites = yaml.load_all(fp.read())
     recent_logs = list(read_recent_logs(log_dir, 3))
     last_log_entry = recent_logs[-1]
     results = []
+    stats_by_site = {}
     for site in sites:
         stats = last_log_entry['stats'][site['id']]
         site['page_count'] = stats['page_count']
         site['freq'] = stats['freq']
         results.append(site)
+        stats_by_site[site['id']] = {
+            'page_count': [],
+            'freq': [],
+        }
+
+    for entry in recent_logs:
+        for siteid, stat in entry['stats'].items():
+            t = int(stat.pop('t'))
+            for k, v in stat.items():
+                stats_by_site[siteid][k].append([t, v])
 
     loader = jinja2.FileSystemLoader('.')
     env = jinja2.Environment(loader=loader)
     html = env.get_template('template.html').render(
         results=results,
         timestamp=datetime.datetime.now(),
+        stats_by_site=to_compact_json(stats_by_site),
     )
     with open(output_html_path, 'w') as fp:
         fp.write(html.encode('utf-8'))
