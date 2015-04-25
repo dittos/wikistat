@@ -8,6 +8,7 @@
     body {
         margin: 10px;
         font-size: 14px;
+        font-family: sans-serif;
     }
     a {
         color: #009688;
@@ -42,6 +43,13 @@
     .ws-g {
         margin-right: 4px;
     }
+    .ws-n {
+        font-size: 0.9em;
+        font-weight: bold;
+        text-align: right;
+        margin-bottom: 4px;
+        display: block;
+    }
     .ws-help {
         color: #444;
         list-style: square;
@@ -64,7 +72,9 @@
 <table class="ws-sites">
 <thead>
     <tr>
-        <th>사이트명/라이선스</th>
+        <th colspan="2">사이트명/라이선스</th>
+    </tr>
+    <tr>
         <th>문서 수</th>
         <th>편집 빈도 (추정)</th>
     </tr>
@@ -72,18 +82,20 @@
 <tbody>
 {% for site in results %}
     <tr>
-        <td>
-            <a href="{{ site.url }}">{{ site.name }}</a><br>
+        <td colspan="2">
+            <a href="{{ site.url }}">{{ site.name }}</a>
             <span class="ws-license">{{ site.license }}</span>
         </td>
+    </tr>
+    <tr>
         {% if not site.error %}
         <td>
+            <span class="ws-n">{{ '{:,}'.format(site.page_count) }}</span>
             <span class="ws-g" data-select="{{ site.id }}.page_count"></span>
-            {{ '{:,}'.format(site.page_count) }}
         </td>
         <td>
+            <span class="ws-n">{{ '%.2f'|format(site.freq) }}회/일</span>
             <span class="ws-g" data-select="{{ site.id }}.freq"></span>
-            {{ '%.2f'|format(site.freq) }}회/일
         </td>
         {% else %}
         <td colspan="2" class="ws-sites-error">{% if site.error == 'timeout' %}시간 초과{% endif %}</td>
@@ -104,8 +116,10 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-sparklines/2.1.2/jquery.sparkline.min.js"></script>
 <script>
+var padding = 8;
 var options = {
-    width: '128px',
+    width: ($('.ws-container').width() / 2 - padding * 2) + 'px',
+    height: '30px',
     lineColor: '#3F51B5',
     fillColor: '#fff',
     tooltipFormatter: function(sparkline, options, fields) {
