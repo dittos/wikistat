@@ -41,8 +41,7 @@ license: CC-by-nc-sa + 추가 조건
 url: "http://rigvedawiki.net/"
 engine: moniwiki
 engine_options:
-  rc_url: "http://rigvedawiki.net/r1/wiki.php/RecentChanges/more"
-  theme: rigveda
+  rc_url: "http://rigvedawiki.net/r1/wiki.php/RecentChanges"
 
 ---
 id: librewiki
@@ -95,3 +94,12 @@ url: "http://nuriwiki.net/Gnat/"
 engine: mediawiki
 engine_options:
   api_endpoint: "http://nuriwiki.net/Gnat/api.php"
+
+---
+id: threadiki
+name: 스레디키
+license: "?"
+url: "http://threadiki.80port.net/wiki/"
+engine: moniwiki
+engine_options:
+  rc_url: "http://threadiki.80port.net/wiki/wiki.php/RecentChanges"
