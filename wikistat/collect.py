@@ -23,8 +23,8 @@ def main(site_config_path, log_dir):
         engine = ENGINES[site['engine']]
         try:
             data = engine.collect(site.pop('engine_options', {}))
-        except Timeout:
-            site['error'] = 'timeout'
+        except:
+            log_entry['stats'][site['id']] = {'error': 'error'}
             continue
         nchanges = len(data['changes'])
         assert nchanges >= 1

@@ -31,9 +31,12 @@ def main(site_config_path, output_html_path, log_dir):
     results = []
     stats_by_site = {}
     for site in sites:
-        stats = last_log_entry['stats'][site['id']]
-        site['page_count'] = stats['page_count']
-        site['freq'] = stats['freq']
+        stats = last_log_entry['stats'].get(site['id'])
+        if stats and 'error' not in stats and 'page_count' in stats:
+            site['page_count'] = stats['page_count']
+            site['freq'] = stats['freq']
+        else:
+            site['error'] = 'error'
         results.append(site)
         stats_by_site[site['id']] = {
             'page_count': [],
@@ -44,7 +47,8 @@ def main(site_config_path, output_html_path, log_dir):
         for siteid, stat in entry['stats'].items():
             t = int(stat.pop('t'))
             for k, v in stat.items():
-                stats_by_site[siteid][k].append([t, v])
+                if k != 'error':
+                    stats_by_site[siteid][k].append([t, v])
 
     loader = jinja2.FileSystemLoader('.')
     env = jinja2.Environment(loader=loader)

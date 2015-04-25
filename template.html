@@ -32,10 +32,6 @@
         border: 1px solid #ccc;
         padding: 8px;
     }
-    .ws-sites-error {
-        text-align: center;
-        color: #999;
-    }
     .ws-license {
         color: #666;
         font-size: 0.85em;
@@ -49,6 +45,9 @@
         text-align: right;
         margin-bottom: 4px;
         display: block;
+    }
+    .ws-n-error {
+        color: red;
     }
     .ws-help {
         color: #444;
@@ -88,18 +87,22 @@
         </td>
     </tr>
     <tr>
-        {% if not site.error %}
         <td>
+            {% if site.error %}
+            <span class="ws-n ws-n-error">[오류]</span>
+            {% else %}
             <span class="ws-n">{{ '{:,}'.format(site.page_count) }}</span>
+            {% endif %}
             <span class="ws-g" data-select="{{ site.id }}.page_count"></span>
         </td>
         <td>
+            {% if site.error %}
+            <span class="ws-n ws-n-error">[오류]</span>
+            {% else %}
             <span class="ws-n">{{ '%.2f'|format(site.freq) }}회/일</span>
+            {% endif %}
             <span class="ws-g" data-select="{{ site.id }}.freq"></span>
         </td>
-        {% else %}
-        <td colspan="2" class="ws-sites-error">{% if site.error == 'timeout' %}시간 초과{% endif %}</td>
-        {% endif %}
     </tr>
 {% endfor %}
 </tbody>
