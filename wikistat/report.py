@@ -47,7 +47,7 @@ def main(site_config_path, output_html_path, log_dir):
         for siteid, stat in entry['stats'].items():
             t = int(stat.pop('t'))
             for k, v in stat.items():
-                if k != 'error':
+                if k != 'error' and siteid in stats_by_site:
                     stats_by_site[siteid][k].append([t, v])
 
     loader = jinja2.FileSystemLoader('.')

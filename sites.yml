@@ -77,14 +77,14 @@ engine: mediawiki
 engine_options:
   api_endpoint: "http://wiki-chan.net/api.php"
 
----
-id: ggulwiki
-name: 꿀위키
-license: CC-by-nc-sa
-url: "http://www.ggulwiki.com/"
-engine: mediawiki
-engine_options:
-  api_endpoint: "http://www.ggulwiki.com/api.php"
+#---
+#id: ggulwiki
+#name: 꿀위키
+#license: CC-by-nc-sa
+#url: "http://www.ggulwiki.com/"
+#engine: mediawiki
+#engine_options:
+#  api_endpoint: "http://www.ggulwiki.com/api.php"
 
 ---
 id: nuriwki
@@ -103,3 +103,12 @@ url: "http://threadiki.80port.net/wiki/"
 engine: moniwiki
 engine_options:
   rc_url: "http://threadiki.80port.net/wiki/wiki.php/RecentChanges"
+
+---
+id: buswiki
+name: 버스버스 위키
+license: "?"
+url: "http://buswiki.2t.yt/"
+engine: mediawiki
+engine_options:
+  api_endpoint: "http://buswiki.2t.yt/api.php"
