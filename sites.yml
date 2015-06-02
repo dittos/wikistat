@@ -26,6 +26,22 @@ engine_options:
   api_endpoint: "http://uncyclopedia.kr/w/api.php"
 
 ---
+id: namuwiki
+name: 나무위키
+license: CC-by-nc-sa
+url: "https://namu.wiki/"
+engine: namu
+
+---
+id: dcwiki
+name: 디시위키
+license: CC-by-sa
+url: "http://wiki.dcinside.com/"
+engine: mediawiki
+engine_options:
+  api_endpoint: "http://wiki.dcinside.com/api.php"
+
+---
 id: gooswiki
 name: 구스위키
 license: CC-by-nc-sa
@@ -51,13 +67,6 @@ url: "http://librewiki.net/"
 engine: mediawiki
 engine_options:
   api_endpoint: "http://librewiki.net/api.php"
-
----
-id: namuwiki
-name: 나무위키
-license: CC-by-nc-sa
-url: "https://namu.wiki/"
-engine: namu
 
 ---
 id: pokemon-ko
