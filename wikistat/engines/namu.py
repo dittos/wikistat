@@ -9,19 +9,10 @@ KST = pytz.timezone('Asia/Seoul')
 def http_get(url):
     return requests.get(url, headers={'User-Agent': 'Mozilla/5.0 ()'}, timeout=10, verify=False)
 
-PAGE_COUNT_MACRO = '[[PageCount]]'
-
 def collect(options):
     data = {}
-    resp = http_get('https://namu.wiki/raw/FrontPage')
-    prefix = None
-    for line in resp.text.splitlines():
-        if PAGE_COUNT_MACRO in line:
-            prefix = line.split(PAGE_COUNT_MACRO, 1)[0]
-            break
-    assert prefix is not None
-    resp = http_get('https://namu.wiki/w/FrontPage')
-    match = re.search(re.escape(prefix) + '(\d+)', resp.text)
+    resp = http_get('https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4/%ED%86%B5%EA%B3%84')
+    match = re.search(u'<td>전체 문서</td><td>(\d+)</td>', resp.text)
     data['page_count'] = int(match.group(1))
     resp = http_get('https://namu.wiki/RecentChanges')
     changes = []

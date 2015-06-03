@@ -24,7 +24,7 @@ def main(site_config_path, log_dir):
         try:
             data = engine.collect(site.pop('engine_options', {}))
         except Exception as e:
-            print e
+            print site['id'], str(e)
             log_entry['stats'][site['id']] = {'error': 'error'}
             continue
         nchanges = len(data['changes'])

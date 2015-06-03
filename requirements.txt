@@ -3,4 +3,4 @@ MarkupSafe==0.23
 PyYAML==3.11
 requests==2.6.0
 pytz
-feedparser==5.2.0
+feedparser==5.2.0.post1

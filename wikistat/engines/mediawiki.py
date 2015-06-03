@@ -13,7 +13,7 @@ def collect(options):
         'meta': 'siteinfo',
         'siprop': 'statistics',
         'format': 'json'
-    }).json()
+    }, timeout=10).json()
     data['page_count'] = resp['query']['statistics']['pages']
     changes = []
     for change in resp['query']['recentchanges']:
