@@ -23,7 +23,9 @@ def collect(options):
     # remove bullet syntax
     prefix = re.sub(r'^\*', '', prefix.lstrip()).lstrip()
     resp = http_get(options['rc_url'])
-    match = re.search(re.escape(prefix) + '(\d+)', resp.text)
+    # strip html tags
+    body = re.sub(r'<[^>]+>', '', resp.text);
+    match = re.search(re.escape(prefix) + '(\d+)', body)
     data['page_count'] = int(match.group(1))
     resp = http_get(options['rc_url'], params={'action': 'atom', 'c': '100'})
     d = feedparser.parse(resp.text)
