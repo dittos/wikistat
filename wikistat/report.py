@@ -49,6 +49,7 @@ def main(site_config_path, output_html_path, log_dir):
             for k, v in stat.items():
                 if k != 'error' and siteid in stats_by_site:
                     stats_by_site[siteid][k].append([t, v])
+    results.sort(key=lambda site: site.get('freq') or -1, reverse=True)
 
     loader = jinja2.FileSystemLoader('.')
     env = jinja2.Environment(loader=loader)
