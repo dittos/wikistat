@@ -130,3 +130,13 @@ url: "http://buswiki.2t.yt/"
 engine: mediawiki
 engine_options:
   api_endpoint: "http://buswiki.2t.yt/api.php"
+
+---
+id: uncyclopedia-game-ko
+name: 한국어 백괴게임
+license: CC-by-nc-sa
+url: "http://game.uncyclopedia.kr/"
+engine: mediawiki
+engine_options:
+  api_endpoint: "http://game.uncyclopedia.kr/w/api.php"
+
