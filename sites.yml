@@ -99,10 +99,10 @@ engine_options:
 id: nuriwki
 name: 누리위키
 license: CC-by-nc-sa
-url: "http://nuriwiki.net/Gnat/"
+url: "http://nuriwiki.net/wiki/"
 engine: mediawiki
 engine_options:
-  api_endpoint: "http://nuriwiki.net/Gnat/api.php"
+  api_endpoint: "http://nuriwiki.net/wiki/api.php"
 
 ---
 id: oriwiki
