@@ -17,7 +17,7 @@ def collect(options):
     resp = http_get('https://namu.wiki/RecentChanges')
     changes = []
     # TODO: 너무 대충 파싱하나?
-    for match in re.findall(r"<td>(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})</td>", resp.text):
+    for match in re.findall(r"<td>\s*(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})\s*</td>", resp.text, re.M):
         changes.append(KST.localize(datetime.datetime.strptime(match, '%Y-%m-%d %H:%M:%S')))
     data['changes'] = changes
     return data
