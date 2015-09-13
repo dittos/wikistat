@@ -1,20 +1,20 @@
 ---
 id: wikipedia-ko
 name: 한국어 위키백과
-url: "http://ko.wikipedia.org/"
+url: "https://ko.wikipedia.org/"
 license: CC-by-sa
 engine: mediawiki
 engine_options:
-  api_endpoint: "http://ko.wikipedia.org/w/api.php"
+  api_endpoint: "https://ko.wikipedia.org/w/api.php"
 
 ---
 id: wiktionary-ko
 name: 한국어 위키낱말사전
-url: "http://ko.wiktionary.org/"
+url: "https://ko.wiktionary.org/"
 license: CC-by-sa
 engine: mediawiki
 engine_options:
-  api_endpoint: "http://ko.wiktionary.org/w/api.php"
+  api_endpoint: "https://ko.wiktionary.org/w/api.php"
 
 ---
 id: uncyclopedia-ko
