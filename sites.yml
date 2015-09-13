@@ -2,7 +2,7 @@
 id: wikipedia-ko
 name: 한국어 위키백과
 url: "http://ko.wikipedia.org/"
-license: CC-by-sa
+license: CC-by-sa 3.0
 engine: mediawiki
 engine_options:
   api_endpoint: "http://ko.wikipedia.org/w/api.php"
@@ -11,7 +11,7 @@ engine_options:
 id: wiktionary-ko
 name: 한국어 위키낱말사전
 url: "http://ko.wiktionary.org/"
-license: CC-by-sa
+license: CC-by-sa 3.0
 engine: mediawiki
 engine_options:
   api_endpoint: "http://ko.wiktionary.org/w/api.php"
@@ -19,7 +19,7 @@ engine_options:
 ---
 id: uncyclopedia-ko
 name: 한국어 백괴사전
-license: CC-by-nc-sa
+license: CC-by-nc-sa 2.5
 url: "http://uncyclopedia.kr/"
 engine: mediawiki
 engine_options:
@@ -28,14 +28,14 @@ engine_options:
 ---
 id: namuwiki
 name: 나무위키
-license: CC-by-nc-sa
+license: CC-by-nc-sa 2.0 KR
 url: "https://namu.wiki/"
 engine: namu
 
 ---
 id: dcwiki
 name: 디시위키
-license: CC-by-sa
+license: CC-by-sa 4.0 + 데이터베이스권 제외
 url: "http://wiki.dcinside.com/"
 engine: mediawiki
 engine_options:
@@ -44,7 +44,7 @@ engine_options:
 ---
 id: gooswiki
 name: 구스위키
-license: CC-by-nc-sa
+license: CC-by-nc-sa 3.0
 url: "http://gooswiki.com/"
 engine: mediawiki
 engine_options:
@@ -53,7 +53,7 @@ engine_options:
 ---
 id: rigvedawiki
 name: 리그베다 위키
-license: CC-by-nc-sa + 추가 조건
+license: CC-by-nc-sa 2.0 KR
 url: "http://rigvedawiki.net/"
 engine: moniwiki
 engine_options:
@@ -61,8 +61,8 @@ engine_options:
 
 ---
 id: librewiki
-name: 리브레위키
-license: CC-by-sa
+name: 리브레 위키
+license: CC-by-sa 3.0
 url: "http://librewiki.net/"
 engine: mediawiki
 engine_options:
@@ -71,7 +71,7 @@ engine_options:
 ---
 id: pokemon-ko
 name: 포켓몬 위키
-license: CC-by-sa
+license: CC-by-sa 3.0
 url: "http://ko.pokemon.wikia.com/"
 engine: wikia
 engine_options:
@@ -80,7 +80,7 @@ engine_options:
 ---
 id: wikichan
 name: 위키쨩
-license: CC-by-sa
+license: CC-by-sa 3.0
 url: "http://wiki-chan.net/"
 engine: mediawiki
 engine_options:
@@ -98,7 +98,7 @@ engine_options:
 ---
 id: nuriwki
 name: 누리위키
-license: CC-by-nc-sa
+license: CC-by-nc-sa 3.0
 url: "http://nuriwiki.net/wiki/"
 engine: mediawiki
 engine_options:
@@ -107,7 +107,7 @@ engine_options:
 ---
 id: oriwiki
 name: 오리위키
-license: CC-by-nc-sa
+license: CC-by-nc-sa 2.0 KR
 url: "https://oriwiki.net/"
 engine: mediawiki
 engine_options:
@@ -134,7 +134,7 @@ engine_options:
 ---
 id: uncyclopedia-game-ko
 name: 한국어 백괴게임
-license: CC-by-nc-sa
+license: CC-by-nc-sa 3.0
 url: "http://game.uncyclopedia.kr/"
 engine: mediawiki
 engine_options:
