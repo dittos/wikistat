@@ -124,8 +124,8 @@ engine_options:
 
 ---
 id: buswiki
-name: 버스버스 위키
-license: "?"
+name: 버스위키
+license: CC-by-nc-nd 4.0
 url: "http://buswiki.2t.yt/"
 engine: mediawiki
 engine_options:
