@@ -152,7 +152,7 @@ engine_options:
 ---
 id: badawiki
 name: 바다위키
-license: CC-by-nc-sa 2.0
+license: CC-by-nc-sa 2.0 KR
 url: "https://wiki.duitsan.com/"
 engine: mediawiki
 engine_options:
