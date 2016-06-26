@@ -12,7 +12,7 @@ def http_get(url):
 def collect(options):
     data = {}
     resp = http_get('https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%ED%86%B5%EA%B3%84')
-    match = re.search(u'<tr>\s*<td.*?>.*?전체 문서.*?</td><td.*?>\s*(\d+)\s*</td>\s*</tr>', resp.text.split(u'문서 통계', 1)[1])
+    match = re.search(u'<tr>\s*<td.*?>.*?전체 문서.*?</td><td.*?>.*?(\d+).*?</td>\s*</tr>', resp.text.split(u'문서 통계', 1)[1])
     data['page_count'] = int(match.group(1))
     resp = http_get('https://namu.wiki/RecentChanges')
     changes = []
