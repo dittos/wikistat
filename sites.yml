@@ -157,3 +157,12 @@ url: "https://wiki.duitsan.com/"
 engine: mediawiki
 engine_options:
   api_endpoint: "https://wiki.duitsan.com/api.php"
+
+---
+id: twicewiki
+name: 트둥백과
+license: CC-by-nc-sa 3.0
+url: "https://twicewiki.net/"
+engine: mediawiki
+engine_options:
+  api_endpoint: "https://twicewiki.net/api.php"
