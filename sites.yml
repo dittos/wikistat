@@ -166,3 +166,12 @@ url: "https://twicewiki.net/"
 engine: mediawiki
 engine_options:
   api_endpoint: "https://twicewiki.net/api.php"
+
+---
+id: kiwiwiki
+name: 키위위키
+license: CC-by-sa 4.0 Intl
+url: "https://kiwki.us/"
+engine: mediawiki
+engine_options:
+  api_endpoint: "https://kiwki.us/api.php"
