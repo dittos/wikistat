@@ -1,8 +1,11 @@
 # -*- coding: utf-8 -*-
 import datetime
 import re
+import json
 import pytz
 import requests
+
+BOM = '\xef\xbb\xbf'
 
 def collect(options):
     data = {}
@@ -13,7 +16,10 @@ def collect(options):
         'meta': 'siteinfo',
         'siprop': 'statistics',
         'format': 'json'
-    }, timeout=10).json()
+    }, timeout=20).content
+    if resp.startswith(BOM):
+        resp = resp[len(BOM):]
+    resp = json.loads(resp)
     data['page_count'] = resp['query']['statistics']['pages']
     changes = []
     for change in resp['query']['recentchanges']:
