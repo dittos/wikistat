@@ -63,10 +63,10 @@ engine_options:
 id: librewiki
 name: 리브레 위키
 license: CC-by-sa 3.0
-url: "http://librewiki.net/"
+url: "https://librewiki.net/"
 engine: mediawiki
 engine_options:
-  api_endpoint: "http://librewiki.net/api.php"
+  api_endpoint: "https://librewiki.net/api.php"
 
 ---
 id: pokemon-ko
