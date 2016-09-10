@@ -144,10 +144,10 @@ engine_options:
 id: osawiki
 name: 오사위키
 license: CC-by-sa 4.0
-url: "http://www.osawiki.ml/"
+url: "https://www.osawiki.com/"
 engine: mediawiki
 engine_options:
-  api_endpoint: "http://www.osawiki.ml/w/api.php"
+  api_endpoint: "https://www.osawiki.com/w/api.php"
 
 ---
 id: badawiki
