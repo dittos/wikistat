@@ -175,3 +175,12 @@ url: "https://hoto.wiki/"
 engine: mediawiki
 engine_options:
   api_endpoint: "https://hoto.wiki/w/api.php"
+
+---
+id: wsilog
+name: 대한위키실록
+license: CC-BY-SA 4.0
+url: "https://wsilog.xyz/"
+engine: mediawiki
+engine_options:
+  api_endpoint: "https://wsilog.xyz/w/api.php"
