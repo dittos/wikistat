@@ -2,7 +2,7 @@
 id: wikipedia-ko
 name: 한국어 위키백과
 url: "https://ko.wikipedia.org/"
-license: CC-by-sa 3.0
+license: CC-BY-SA 3.0
 engine: mediawiki
 engine_options:
   api_endpoint: "https://ko.wikipedia.org/w/api.php"
@@ -11,7 +11,7 @@ engine_options:
 id: wiktionary-ko
 name: 한국어 위키낱말사전
 url: "https://ko.wiktionary.org/"
-license: CC-by-sa 3.0
+license: CC-BY-SA 3.0
 engine: mediawiki
 engine_options:
   api_endpoint: "https://ko.wiktionary.org/w/api.php"
@@ -19,23 +19,23 @@ engine_options:
 ---
 id: uncyclopedia-ko
 name: 한국어 백괴사전
-license: CC-by-nc-sa 2.5
-url: "http://uncyclopedia.kr/"
+license: CC-BY-NC-SA 2.5
+url: "https://uncyclopedia.kr/"
 engine: mediawiki
 engine_options:
-  api_endpoint: "http://uncyclopedia.kr/w/api.php"
+  api_endpoint: "https://uncyclopedia.kr/w/api.php"
 
 ---
 id: namuwiki
 name: 나무위키
-license: CC-by-nc-sa 2.0 KR
+license: CC-BY-NC-SA 2.0 KR
 url: "https://namu.wiki/"
 engine: namu
 
 ---
 id: dcwiki
 name: 디시위키
-license: CC-by-sa 4.0 + 데이터베이스권 제외
+license: CC-BY-SA 4.0 + 데이터베이스권 제외
 url: "http://wiki.dcinside.com/"
 engine: mediawiki
 engine_options:
@@ -44,7 +44,7 @@ engine_options:
 ---
 id: gooswiki
 name: 구스위키
-license: CC-by-nc-sa 3.0
+license: CC-BY-NC-SA 3.0
 url: "http://goos.wiki/"
 engine: mediawiki
 engine_options:
@@ -53,16 +53,16 @@ engine_options:
 ---
 id: rigvedawiki
 name: 리그베다 위키
-license: CC-by-nc-sa 2.0 KR
-url: "http://rigvedawiki.net/"
+license: CC-BY-NC-SA 2.0 KR
+url: "https://rigvedawiki.net/"
 engine: moniwiki
 engine_options:
-  rc_url: "http://rigvedawiki.net/r1/wiki.php/RecentChanges"
+  rc_url: "https://rigvedawiki.net/r1/wiki.php/RecentChanges"
 
 ---
 id: librewiki
 name: 리브레 위키
-license: CC-by-sa 3.0
+license: CC-BY-SA 3.0
 url: "https://librewiki.net/"
 engine: mediawiki
 engine_options:
@@ -71,7 +71,7 @@ engine_options:
 ---
 id: pokemon-ko
 name: 포켓몬 위키
-license: CC-by-sa 3.0
+license: CC-BY-SA 3.0
 url: "http://ko.pokemon.wikia.com/"
 engine: wikia
 engine_options:
@@ -80,16 +80,16 @@ engine_options:
 ---
 id: wikichan
 name: 위키쨩
-license: CC-by-sa 3.0
-url: "http://wiki-chan.net/"
+license: CC-BY-SA 3.0
+url: "https://wiki-chan.net/"
 engine: mediawiki
 engine_options:
-  api_endpoint: "http://wiki-chan.net/api.php"
+  api_endpoint: "https://wiki-chan.net/api.php"
 
 #---
 #id: ggulwiki
 #name: 꿀위키
-#license: CC-by-nc-sa
+#license: CC-BY-NC-SA
 #url: "http://www.ggulwiki.com/"
 #engine: mediawiki
 #engine_options:
@@ -98,16 +98,16 @@ engine_options:
 ---
 id: nuriwki
 name: 누리위키
-license: CC-by-nc-sa 3.0
-url: "http://nuriwiki.net/wiki/"
+license: CC-BY-NC-SA 3.0
+url: "https://nuriwiki.net/wiki/"
 engine: mediawiki
 engine_options:
-  api_endpoint: "http://nuriwiki.net/wiki/api.php"
+  api_endpoint: "https://nuriwiki.net/wiki/api.php"
 
 ---
 id: oriwiki
 name: 오리위키
-license: CC-by-nc-sa 2.0 KR
+license: CC-BY-NC-SA 2.0 KR
 url: "https://oriwiki.net/"
 engine: mediawiki
 engine_options:
@@ -125,25 +125,25 @@ engine_options:
 ---
 id: buswiki
 name: 버스위키
-license: CC-by-nc-nd 4.0
-url: "http://buswiki.2t.yt/"
+license: CC-BY-SA 4.0
+url: "https://buswiki.ml/"
 engine: mediawiki
 engine_options:
-  api_endpoint: "http://buswiki.2t.yt/api.php"
+  api_endpoint: "https://buswiki.ml/api.php"
 
 ---
 id: uncyclopedia-game-ko
 name: 한국어 백괴게임
-license: CC-by-nc-sa 3.0
-url: "http://game.uncyclopedia.kr/"
+license: CC-BY-NC-SA 3.0
+url: "https://game.uncyclopedia.kr/"
 engine: mediawiki
 engine_options:
-  api_endpoint: "http://game.uncyclopedia.kr/w/api.php"
+  api_endpoint: "https://game.uncyclopedia.kr/w/api.php"
 
 ---
 id: osawiki
 name: 오사위키
-license: CC-by-sa 4.0
+license: CC-BY-SA 4.0 + 데이터베이스권 제외
 url: "https://www.osawiki.com/"
 engine: mediawiki
 engine_options:
@@ -152,26 +152,26 @@ engine_options:
 ---
 id: badawiki
 name: 바다위키
-license: CC-by-nc-sa 2.0 KR
+license: CC-BY-NC-SA 2.0 KR
 url: "https://wiki.duitsan.com/"
 engine: mediawiki
 engine_options:
   api_endpoint: "https://wiki.duitsan.com/api.php"
 
 ---
-id: twicewiki
-name: 트둥백과
-license: CC-by-nc-sa 3.0
-url: "https://twicewiki.net/"
-engine: mediawiki
-engine_options:
-  api_endpoint: "https://twicewiki.net/api.php"
-
----
 id: kiwiwiki
 name: 키위위키
-license: CC-by-sa 4.0 Intl
+license: CC-BY-SA 4.0 + 데이터베이스권 제외
 url: "https://kiwki.us/"
 engine: mediawiki
 engine_options:
   api_endpoint: "https://kiwki.us/api.php"
+
+---
+id: hotowiki
+name: 호토위키
+license: CC-BY-SA 4.0 + 데이터베이스권 제외
+url: "https://hoto.wiki/"
+engine: mediawiki
+engine_options:
+  api_endpoint: "https://hoto.wiki/w/api.php"
