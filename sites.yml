@@ -167,14 +167,14 @@ engine: mediawiki
 engine_options:
   api_endpoint: "https://kiwki.us/api.php"
 
----
-id: hotowiki
-name: 호토위키
-license: CC-BY-SA 4.0 + 데이터베이스권 제외
-url: "https://hoto.wiki/"
-engine: mediawiki
-engine_options:
-  api_endpoint: "https://hoto.wiki/w/api.php"
+#---
+#id: hotowiki
+#name: 호토위키
+#license: CC-BY-SA 4.0 + 데이터베이스권 제외
+#url: "https://hoto.wiki/"
+#engine: mediawiki
+#engine_options:
+#  api_endpoint: "https://hoto.wiki/w/api.php"
 
 ---
 id: wsilog
