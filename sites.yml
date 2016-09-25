@@ -184,3 +184,12 @@ url: "https://wsilog.xyz/"
 engine: mediawiki
 engine_options:
   api_endpoint: "https://wsilog.xyz/w/api.php"
+
+---
+id: shiftwiki
+name: 싶스위키
+license: CC-BY-NC-SA 4.0
+url: "https://wiki.shiftstudios.net/"
+engine: mediawiki
+engine_options:
+  api_endpoint: "https://wiki.shiftstudios.net/w/api.php"
