@@ -153,7 +153,7 @@ engine_options:
 id: badawiki
 name: 바다위키
 license: CC-BY-NC-SA 2.0 KR
-url: "https://wiki.duitsan.com/"
+url: "https://bada.wiki/"
 engine: mediawiki
 engine_options:
   api_endpoint: "https://wiki.duitsan.com/api.php"
