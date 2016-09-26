@@ -32,14 +32,14 @@ license: CC-BY-NC-SA 2.0 KR
 url: "https://namu.wiki/"
 engine: namu
 
----
-id: dcwiki
-name: 디시위키
-license: CC-BY-SA 4.0 + 데이터베이스권 제외
-url: "http://wiki.dcinside.com/"
-engine: mediawiki
-engine_options:
-  api_endpoint: "http://wiki.dcinside.com/api.php"
+#---
+#id: dcwiki
+#name: 디시위키
+#license: CC-BY-SA 4.0 + 데이터베이스권 제외
+#url: "http://wiki.dcinside.com/"
+#engine: mediawiki
+#engine_options:
+#  api_endpoint: "http://wiki.dcinside.com/api.php"
 
 ---
 id: gooswiki
