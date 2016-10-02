@@ -183,7 +183,7 @@ license: CC-BY-SA 4.0
 url: "https://wsilog.xyz/"
 engine: mediawiki
 engine_options:
-  api_endpoint: "https://wsilog.xyz/w/api.php"
+  api_endpoint: "https://wsilog.xyz/wiki/api.php"
 
 ---
 id: shiftwiki
