@@ -140,14 +140,14 @@ engine: mediawiki
 engine_options:
   api_endpoint: "https://game.uncyclopedia.kr/w/api.php"
 
----
-id: osawiki
-name: 오사위키
-license: CC-BY-SA 4.0 + 데이터베이스권 제외
-url: "https://www.osawiki.com/"
-engine: mediawiki
-engine_options:
-  api_endpoint: "https://www.osawiki.com/w/api.php"
+#---
+#id: osawiki
+#name: 오사위키
+#license: CC-BY-SA 4.0 + 데이터베이스권 제외
+#url: "https://www.osawiki.com/"
+#engine: mediawiki
+#engine_options:
+#  api_endpoint: "https://www.osawiki.com/w/api.php"
 
 ---
 id: badawiki
@@ -165,7 +165,7 @@ license: CC-BY-SA 4.0 + 데이터베이스권 제외
 url: "https://kiwki.us/"
 engine: mediawiki
 engine_options:
-  api_endpoint: "https://kiwki.us/api.php"
+  api_endpoint: "https://kiwki.us/w/api.php"
 
 #---
 #id: hotowiki
@@ -176,14 +176,14 @@ engine_options:
 #engine_options:
 #  api_endpoint: "https://hoto.wiki/w/api.php"
 
----
-id: wsilog
-name: 대한위키실록
-license: CC-BY-SA 4.0
-url: "https://wsilog.xyz/"
-engine: mediawiki
-engine_options:
-  api_endpoint: "https://wsilog.xyz/wiki/api.php"
+#---
+#id: wsilog
+#name: 대한위키실록
+#license: CC-BY-SA 4.0
+#url: "https://wsilog.xyz/"
+#engine: mediawiki
+#engine_options:
+#  api_endpoint: "https://wsilog.xyz/wiki/api.php"
 
 ---
 id: shiftwiki
