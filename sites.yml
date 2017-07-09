@@ -104,19 +104,19 @@ engine: mediawiki
 engine_options:
   api_endpoint: "https://nuriwiki.net/wiki/api.php"
 
----
-id: oriwiki
-name: 오리위키
-license: CC-BY-NC-SA 2.0 KR
-url: "https://oriwiki.net/"
-engine: mediawiki
-engine_options:
-  api_endpoint: "https://oriwiki.net/api.php"
+#---
+#id: oriwiki
+#name: 오리위키
+#license: CC-BY-NC-SA 2.0 KR
+#url: "https://oriwiki.net/"
+#engine: mediawiki
+#engine_options:
+#  api_endpoint: "https://oriwiki.net/api.php"
 
 ---
 id: threadiki
 name: 스레디키
-license: "?"
+license: "CC BY-NC-SA 3.0"
 url: "http://threadiki.80port.net/wiki/"
 engine: moniwiki
 engine_options:
@@ -149,23 +149,23 @@ engine_options:
 #engine_options:
 #  api_endpoint: "https://www.osawiki.com/w/api.php"
 
----
-id: badawiki
-name: 바다위키
-license: CC-BY-NC-SA 2.0 KR
-url: "https://bada.wiki/"
-engine: mediawiki
-engine_options:
-  api_endpoint: "https://wiki.duitsan.com/api.php"
+#---
+#id: badawiki
+#name: 바다위키
+#license: CC-BY-NC-SA 2.0 KR
+#url: "https://bada.wiki/"
+#engine: mediawiki
+#engine_options:
+#  api_endpoint: "https://wiki.duitsan.com/api.php"
 
----
-id: kiwiwiki
-name: 키위위키
-license: CC-BY-SA 4.0 + 데이터베이스권 제외
-url: "https://kiwki.us/"
-engine: mediawiki
-engine_options:
-  api_endpoint: "https://kiwki.us/w/api.php"
+#---
+#id: kiwiwiki
+#name: 키위위키
+#license: CC-BY-SA 4.0 + 데이터베이스권 제외
+#url: "https://kiwki.us/"
+#engine: mediawiki
+#engine_options:
+#  api_endpoint: "https://kiwki.us/w/api.php"
 
 #---
 #id: hotowiki
