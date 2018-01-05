@@ -195,7 +195,7 @@ engine_options:
   api_endpoint: "https://wiki.v.anil.la/w/api.php"
 
 ---
-id: wiktionary-ko
+id: wikisource-ko
 name: 한국어 위키문헌
 url: "https://ko.wikisource.org/"
 license: CC-BY-SA 3.0
