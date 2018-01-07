@@ -202,3 +202,12 @@ license: CC-BY-SA 3.0
 engine: mediawiki
 engine_options:
   api_endpoint: "https://ko.wikisource.org/w/api.php"
+
+---
+id: wikiquote-ko
+name: 한국어 위키인용집
+url: "https://ko.wikiquote.org/"
+license: CC-BY-SA 3.0
+engine: mediawiki
+engine_options:
+  api_endpoint: "https://ko.wikiquote.org/w/api.php"
